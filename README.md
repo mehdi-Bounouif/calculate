@@ -1,2 +1,1 @@
-# calculate
-claculate
+![calculate](images/calculate.jpg);
