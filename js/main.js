@@ -1,6 +1,16 @@
+
+let error = document.getElementById('error');
 let result = document.getElementById('input');
-let calc = (num) => {
+
+let Calc = (num) => {
    result.value += num;
+}
+
+function Clear(){
+  result.value = '';
+}
+function Delete(){
+  result.value = result.value.slice(0,-1)
 }
 
 let Result=() =>{
@@ -8,12 +18,6 @@ let Result=() =>{
     result.value = eval(result.value);
   }
   catch(err){
-    alert('enter the valid number');
+    error.innerHTML = '" enter a valid number "';
   }
-}
-function clr(){
-  result.value = '';
-}
-function del(){
-  result.value = result.value.slice(0,-1)
 }
