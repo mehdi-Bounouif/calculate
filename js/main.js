@@ -1,23 +1,21 @@
-
-let error = document.getElementById('error');
-let result = document.getElementById('input');
+let error = document.getElementById("error");
+let result = document.getElementById("input");
 
 let Calc = (num) => {
-   result.value += num;
+  result.value += num;
+};
+
+function Clear() {
+  result.value = "";
+}
+function Delete() {
+  result.value = result.value.slice(0, -1);
 }
 
-function Clear(){
-  result.value = '';
-}
-function Delete(){
-  result.value = result.value.slice(0,-1)
-}
-
-let Result=() =>{
-  try{
+let Result = () => {
+  try {
     result.value = eval(result.value);
-  }
-  catch(err){
+  } catch (err) {
     error.innerHTML = '" enter a valid number "';
   }
-}
+};
